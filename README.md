@@ -97,19 +97,31 @@
 <h2>Example Code</h2>
 <p>Below is an example of a Content-Based Movie Recommender:</p>
 <pre><code>import pandas as pd
-
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity</code> </pre>
+from sklearn.metrics.pairwise import cosine_similarity
 
-Load the dataset
+# Load the dataset
+movies = pd.read_csv('data/movies.csv')
 
-<pre><code>movies = pd.read_csv('data/movies.csv') </code> </pre>
+# Preprocess data: Combine features for content-based filtering
+movies['combined_features'] = movies['genres'] + ' ' + movies['title']
 
-Preprocess data: Combine features for content-based filtering
-
-<pre><code> movies['combined_features'] = movies['genres'] + ' ' + movies['title'] </code> </pre>
-
-Vectorize the features
-<pre><code>
+# Vectorize the features
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
-tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features']) </code> </pre>
+tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features'])
+
+# Compute cosine similarity between movies
+cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+
+# Recommendation function
+def recommend_movies(movie_title, num_recommendations=5):
+    # Get the index of the movie that matches the title
+    movie_index = movies[movies['title'] == movie_title].index[0]
+    similarity_scores = list(enumerate(cosine_sim[movie_index]))
+    sorted_scores = sorted(similarity_scores, key=lambda x: x[1], reverse=True)[1:num_recommendations+1]
+    recommended_movies = [movies.iloc[i[0]]['title'] for i in sorted_scores]
+    return recommended_movies
+
+# Example usage
+print(recommend_movies('Toy Story', 5)) </code> </pre>
+
