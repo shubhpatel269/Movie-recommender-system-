@@ -100,20 +100,20 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Load the dataset
+#Load the dataset
 movies = pd.read_csv('data/movies.csv')
 
-# Preprocess data: Combine features for content-based filtering
+#Preprocess data: Combine features for content-based filtering
 movies['combined_features'] = movies['genres'] + ' ' + movies['title']
 
-# Vectorize the features
+#Vectorize the features
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
 tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features'])
 
-# Compute cosine similarity between movies
+#Compute cosine similarity between movies
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 
-# Recommendation function
+#Recommendation function
 def recommend_movies(movie_title, num_recommendations=5):
     # Get the index of the movie that matches the title
     movie_index = movies[movies['title'] == movie_title].index[0]
@@ -122,6 +122,6 @@ def recommend_movies(movie_title, num_recommendations=5):
     recommended_movies = [movies.iloc[i[0]]['title'] for i in sorted_scores]
     return recommended_movies
 
-# Example usage
+#Example usage
 print(recommend_movies('Toy Story', 5)) </code> </pre>
 
