@@ -99,17 +99,17 @@
 <pre><code>import pandas as pd
 
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity</code> </pre>
 
 Load the dataset
 
-movies = pd.read_csv('data/movies.csv')
+<pre><code>movies = pd.read_csv('data/movies.csv') </code> </pre>
 
 Preprocess data: Combine features for content-based filtering
 
-movies['combined_features'] = movies['genres'] + ' ' + movies['title']
+<pre><code> movies['combined_features'] = movies['genres'] + ' ' + movies['title'] </code> </pre>
 
 Vectorize the features
-
+<pre><code>
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
-tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features'])
+tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features']) </code> </pre>
