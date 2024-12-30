@@ -81,7 +81,7 @@
 │   ├── content_based_filtering.py
 ├── app.py
 ├── requirements.txt
-├── README.md
+├── README.md </code>
 
 <ul>
     <li><strong>data/</strong>: Contains the dataset files.</li>
