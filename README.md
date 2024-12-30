@@ -10,8 +10,6 @@
     <li><strong>Interactive User Interface</strong>: Enables users to search for movies and view recommendations.</li>
 </ul>
 
-<hr>
-
 <h2>Tech Stack</h2>
 <ul>
     <li><strong>Programming Language</strong>: Python</li>
@@ -26,8 +24,6 @@
     </li>
     <li><strong>Data Source</strong>: MovieLens dataset or similar</li>
 </ul>
-
-<hr>
 
 <h2>Installation</h2>
 <ol>
@@ -45,8 +41,6 @@
     </li>
 </ol>
 
-<hr>
-
 <h2>Dataset</h2>
 <ul>
     <li><strong>Source</strong>: The project uses the MovieLens dataset, which contains user ratings and metadata for thousands of movies. You can download the dataset from <a href="https://grouplens.org/datasets/movielens/">MovieLens</a>.</li>
@@ -59,16 +53,12 @@
     </li>
 </ul>
 
-<hr>
-
 <h2>Usage</h2>
 <ol>
     <li><strong>Run the Recommender System</strong>: Start the application and follow the on-screen instructions to input your preferences.</li>
     <li><strong>Recommendation Output</strong>: The system will provide a list of movie recommendations based on your input.</li>
     <li><strong>Customization</strong>: Modify parameters in the code to tune the recommendation algorithms as per your requirements.</li>
 </ol>
-
-<hr>
 
 <h2>Project Structure</h2>
 <pre><code>Movie-recommender-system-
