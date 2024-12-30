@@ -125,3 +125,9 @@ def recommend_movies(movie_title, num_recommendations=5):
 #Example usage
 print(recommend_movies('Toy Story', 5)) </code> </pre>
 
+# Contributing
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Push the branch and create a pull request.
