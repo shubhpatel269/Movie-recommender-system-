@@ -72,3 +72,43 @@
 
 <h2>Project Structure</h2>
 <pre><code>Movie-recommender-system-
+├── data
+│   ├── movies.csv
+│   ├── ratings.csv
+│   ├── links.csv
+├── models
+│   ├── collaborative_filtering.py
+│   ├── content_based_filtering.py
+├── app.py
+├── requirements.txt
+├── README.md
+
+<ul>
+    <li><strong>data/</strong>: Contains the dataset files.</li>
+    <li><strong>models/</strong>: Contains implementation of different recommendation algorithms.</li>
+    <li><strong>app.py</strong>: Main script to run the application.</li>
+    <li><strong>requirements.txt</strong>: List of dependencies.</li>
+    <li><strong>README.md</strong>: Documentation for the project.</li>
+</ul>
+
+<hr>
+
+<h2>Example Code</h2>
+<p>Below is an example of a Content-Based Movie Recommender:</p>
+<pre><code>import pandas as pd
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+Load the dataset
+
+movies = pd.read_csv('data/movies.csv')
+
+Preprocess data: Combine features for content-based filtering
+
+movies['combined_features'] = movies['genres'] + ' ' + movies['title']
+
+Vectorize the features
+
+tfidf_vectorizer = TfidfVectorizer(stop_words='english')
+tfidf_matrix = tfidf_vectorizer.fit_transform(movies['combined_features'])
