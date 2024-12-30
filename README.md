@@ -1,5 +1,5 @@
 # Movie-recommender-system
-<hr>
+
 
 <h2>Features</h2>
 <ul>
