@@ -82,8 +82,6 @@
     <li><strong>README.md</strong>: Documentation for the project.</li>
 </ul>
 
-<hr>
-
 <h2>Example Code</h2>
 <p>Below is an example of a Content-Based Movie Recommender:</p>
 <pre><code>import pandas as pd
