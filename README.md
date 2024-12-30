@@ -1,9 +1,74 @@
 # Movie-recommender-system
-This repository contains the implementation of a Movie Recommender System. The system provides personalized movie recommendations based on user preferences and historical data. The project leverages collaborative filtering and content-based filtering techniques to suggest movies that users might enjoy.
+<hr>
 
-#Features:
--User-based Collaborative Filtering: Recommends movies based on similarities between users.
--Item-based Collaborative Filtering: Recommends movies based on similarities between items (movies).
--Content-based Filtering: Suggests movies by analyzing movie metadata, such as genres, directors, and cast.
--Hybrid Approach: Combines collaborative and content-based techniques for enhanced recommendations.
--Interactive User Interface: Enables users to search for movies and view recommendations.
+<h2>Features</h2>
+<ul>
+    <li><strong>User-based Collaborative Filtering</strong>: Recommends movies based on similarities between users.</li>
+    <li><strong>Item-based Collaborative Filtering</strong>: Recommends movies based on similarities between items (movies).</li>
+    <li><strong>Content-based Filtering</strong>: Suggests movies by analyzing movie metadata, such as genres, directors, and cast.</li>
+    <li><strong>Hybrid Approach</strong>: Combines collaborative and content-based techniques for enhanced recommendations.</li>
+    <li><strong>Interactive User Interface</strong>: Enables users to search for movies and view recommendations.</li>
+</ul>
+
+<hr>
+
+<h2>Tech Stack</h2>
+<ul>
+    <li><strong>Programming Language</strong>: Python</li>
+    <li><strong>Libraries</strong>:
+        <ul>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Scikit-learn</li>
+            <li>Matplotlib/Seaborn (for visualization)</li>
+            <li>Flask/Streamlit (for UI, if applicable)</li>
+        </ul>
+    </li>
+    <li><strong>Data Source</strong>: MovieLens dataset or similar</li>
+</ul>
+
+<hr>
+
+<h2>Installation</h2>
+<ol>
+    <li>Clone the repository:
+        <pre><code>git clone https://github.com/shubhpatel269/Movie-recommender-system-</code></pre>
+    </li>
+    <li>Navigate to the project directory:
+        <pre><code>cd Movie-recommender-system-</code></pre>
+    </li>
+    <li>Install the required dependencies:
+        <pre><code>pip install -r requirements.txt</code></pre>
+    </li>
+    <li>Run the application (if applicable):
+        <pre><code>python app.py</code></pre>
+    </li>
+</ol>
+
+<hr>
+
+<h2>Dataset</h2>
+<ul>
+    <li><strong>Source</strong>: The project uses the MovieLens dataset, which contains user ratings and metadata for thousands of movies. You can download the dataset from <a href="https://grouplens.org/datasets/movielens/">MovieLens</a>.</li>
+    <li><strong>Structure</strong>:
+        <ul>
+            <li><code>ratings.csv</code>: User ratings for movies</li>
+            <li><code>movies.csv</code>: Movie metadata (e.g., title, genres)</li>
+            <li><code>links.csv</code>: Links to external movie databases</li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<h2>Usage</h2>
+<ol>
+    <li><strong>Run the Recommender System</strong>: Start the application and follow the on-screen instructions to input your preferences.</li>
+    <li><strong>Recommendation Output</strong>: The system will provide a list of movie recommendations based on your input.</li>
+    <li><strong>Customization</strong>: Modify parameters in the code to tune the recommendation algorithms as per your requirements.</li>
+</ol>
+
+<hr>
+
+<h2>Project Structure</h2>
+<pre><code>Movie-recommender-system-
